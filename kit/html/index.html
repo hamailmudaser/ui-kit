@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../js/index.js">
+        <link rel="stylesheet" href="../css/payment.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+            src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <a href="../html/index.html">
+                        <img src="../assets/Layer_1.png" alt>
+                    </a>
+                    <i class='bx bx-expand-vertical'></i>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="">
+                            <i class='bx bxs-dashboard'></i>Dashboard
+                        </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="">
+                            <i class='bx bxs-dashboard'></i>Menu
+                        </a>
+                        </div>
+                    </li>
+                    <li class="menu-item" >
+                        <div class="div-icon">
+                            <a href="../html/tables.html">
+                            <i class='bx bxs-dashboard'></i>Table
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/orders.html">
+                            <i class='bx bxs-dashboard'></i>Orders
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-support'></i>Support
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-cog'></i>Setting
+                        </div>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <div class="dark-mode-toggle">
+                        <i class='bx bx-cog'></i>Dark Mode
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="profile-info">
+                        <img src="../assets/review.webp" alt="Profile Picture">
+                        <div class="profile-details">
+                            <span class="name">Kadir Miye</span>
+                            <span class="email">kadir@8uikit.com</span>
+                        </div>
+                        <span class="pro-badge">PRO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-head">
+                    <div class="content-start">
+                        <h2>Menu Item</h2>
+                        <p>(384)</p>
+                    </div>
+                    <div class="search-bar">
+                        <input class="search-bar" type="text"
+                            placeholder="Search..">
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="tab">
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'allproducts')">
+                            <i class='bx bx-star'></i>Breakfast</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'featured')">
+                            <i class='bx bx-star'></i>Lunch</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'flashdeals')">
+                            <i class='bx bx-star'></i>Dinner</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'lastminute')">
+                            <i class='bx bx-star'></i>Soup</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'lastminutes')">
+                            <i class='bx bx-star'></i>Desserts</button>
+                    </div>
+                    <script>
+                        function openproducts(evt, productName) {
+                            // Declare all variables
+                            var i, tabcontent, tablinks;
+                        
+                            // Get all elements with class="tabcontent" and hide them
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                        
+                            // Get all elements with class="tablinks" and remove the class "active"
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                        
+                            // Show the current tab, and add an "active" class to the button that opened the tab
+                            document.getElementById(productName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                        
+                        // By default, open the first tab
+                        document.addEventListener("DOMContentLoaded", function() {
+                            document.querySelector(".tablinks").click();
+                        });
+                        
+                    </script>
+                    <div id="allproducts" class="tabcontent"
+                        style="display: block;">
+                        <div class="breakfast-1">
+                            <div class="product">
+                                <img src="../assets/Drink 1.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 2.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 3.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 4.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="breakfast">
+                            <div class="product">
+                                <img src="../assets/Drink 5.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 6.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 7.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 8.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="breakfast">
+                            <div class="product">
+                                <img src="../assets/Drink 9.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 10.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 11.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 12.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="featured" class="tabcontent">
+                        <div class="breakfast-1">
+                            <div class="product">
+                                <img src="../assets/Drink 9.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 10.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 11.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 12.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="breakfast">
+                            <div class="product">
+                                <img src="../assets/Drink 13.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 14.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 15.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 16.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="flashdeals" class="tabcontent">
+                        <div class="breakfast-1">
+                            <div class="product">
+                                <img src="../assets/Drink 13.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 14.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 15.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 16.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="breakfast">
+                            <div class="product">
+                                <img src="../assets/Drink 5.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 6.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 7.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 8.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lastminute" class="tabcontent">
+                        <div class="breakfast-1">
+                            <div class="product">
+                                <img src="../assets/Drink 13.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 14.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 15.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 16.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="lastminutes" class="tabcontent">
+                        <div class="breakfast-1">
+                            <div class="product">
+                                <img src="../assets/Drink 5.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 6.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 7.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 8.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                        <div class="breakfast">
+                            <div class="product">
+                                <img src="../assets/Drink 13.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 14.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 15.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                            <div class="product">
+                                <img src="../assets/Drink 16.png" alt>
+                                <h3>Product Name</h3>
+                                <p>$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-fotter">
+                    <div class="cards">
+                        <div class="fotter-card">
+                            <div class="div-t5">
+                                <h3>T5</h3>
+                            </div>
+                            <div class="fotter-body">
+                                <div class="div-1">
+                                    <h4>#00934</h4>
+                                    <button><i
+                                            class='bx bxs-circle'></i>Kitchen</button>
+                                </div>
+                                <div class="div-2">
+                                    <p>8 item</p>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                    <h5>7:28 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fotter-card">
+                            <div class="div-t5">
+                                <h3>T5</h3>
+                            </div>
+                            <div class="fotter-body">
+                                <div class="div-1">
+                                    <h4>#00934</h4>
+                                    <button><i
+                                            class='bx bxs-circle'></i>Kitchen</button>
+                                </div>
+                                <div class="div-2">
+                                    <p>8 item</p>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                    <h5>7:28 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fotter-card">
+                            <div class="div-t5">
+                                <h3>T5</h3>
+                            </div>
+                            <div class="fotter-body">
+                                <div class="div-1">
+                                    <h4>#00934</h4>
+                                    <button><i
+                                            class='bx bxs-circle'></i>Kitchen</button>
+                                </div>
+                                <div class="div-2">
+                                    <p>8 item</p>
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                    <h5>7:28 PM</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tabs1">
+                <div class="tab1">
+                    <button class=" active">Eat In</button>
+                    <button>Eat Out</button>
+                    <button>Deliver</button>
+                </div>
+
+                <div class="content1">
+                    <label for="table-select">Select table *</label>
+                    <select id="table-select">
+                        <option value="table1">Table 1</option>
+                        <option value="table2">Table 2</option>
+                        <option value="table3">Table 3</option>
+                        <option value="table4">Table 4</option>
+                        <option value="table5">Table 5</option>
+                    </select>
+
+                    <div class="product-list">
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-info">
+                                <span class="product-name">Product Name</span>
+                                <span class="product-price">$10.00</span>
+                            </div>
+                            <div class="product-quantity">
+                                <button class="decrease">-</button>
+                                <span class="quantity">3</span>
+                                <button class="increase">+</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <h2>Summary</h2>
+                    <div class="coupon">
+                        <span class="coupon-code"><i
+                                class='bx bx-purchase-tag bx-flip-horizontal'></i>
+                            B8R932KA2</span>
+                        <span class="coupon-discount">20% Off</span>
+                    </div>
+
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span>$35.87</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Taxes:</span>
+                            <span>$2.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Discontent:</span>
+                            <span>-$6.00</span>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <span>Total:</span>
+                        <span>$35.87</span>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit" class="pay-btn"
+                            onclick="openPopup()" onclick="on()">Pay</button>
+                        <button class="more-btn">More</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const tabs1 = document.querySelectorAll(".tab1");
+                    const productQuantities = document.querySelectorAll(".product-quantity");
+                  
+                    // Tab switching functionality
+                    tabs1.forEach(tab1 => {
+                      tab1.addEventListener("click", function() {
+                        // Remove the 'active' class from all tabs
+                        tabs1.forEach(t => t.classList.remove("active"));
+                        
+                        // Add the 'active' class to the clicked tab
+                        this.classList.add("active");
+                      });
+                    });
+                  
+                    // Quantity adjustment functionality
+                    productQuantities.forEach(quantityContainer => {
+                      const decreaseButton = quantityContainer.querySelector(".decrease");
+                      const increaseButton = quantityContainer.querySelector(".increase");
+                      const quantityDisplay = quantityContainer.querySelector(".quantity");
+                  
+                      let quantity = parseInt(quantityDisplay.textContent);
+                      decreaseButton.addEventListener("click", function() {
+                        if (quantity > 1) {
+                          quantity--;
+                          quantityDisplay.textContent = quantity;
+                        }
+                      });
+                  
+                      increaseButton.addEventListener("click", function() {
+                        quantity++;
+                        quantityDisplay.textContent = quantity;
+                      });
+                    });
+                  });
+              </script>
+        </div>
+        <div class="div-bg" id="overlay" onclick="off()">
+            <div class="container" id="popup">
+                <div class="payment-section">
+                    <h3>Payment</h3>
+                    <div class="payment-group">
+                        <label for="account1">Select Account</label>
+                        <select id="account1">
+                            <option value="applepay">ApplePay</option>
+                            <option value="visacard">Visa Card</option>
+                        </select>
+                        <input type="number" placeholder="Amount" value="20">
+                    </div>
+                    <div class="payment-group">
+                        <label for="account2">Select Account</label>
+                        <select id="account2">
+                            <option value="visacard">Visa Card</option>
+                            <option value="applepay">ApplePay</option>
+                        </select>
+                        <input type="number" placeholder="Amount" value="50">
+                    </div>
+                    <div class="keypad">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>0</button>
+                        <button>+</button>
+                        <button><i class="icon-delete"></i></button>
+                    </div>
+                </div>
+                <div class="order-details">
+                    <h3>Order details</h3>
+                    <div class="details-group">
+                        <p>Order ID: <span>#4234274</span></p>
+                        <p>Date: <span>Aug 5, 2024</span></p>
+                        <p>Dine in: <span>Table 8</span></p>
+                    </div>
+                    <div class="summary">
+                        <h3>Summary</h3>
+                        <div class="sum-div">
+
+                            <p>Total Items: <span>4</span></p>
+                            <p>Total Payable: <span>$35.67</span></p>
+                            <p>Total Paying: <span>$35.67</span></p>
+                            <p>Balance: <span>$0.00</span></p>
+                        </div>
+                    </div>
+                    <button class="confirm-btn" onclick="closePopup( )">Confirm
+                        payment</button>
+                </div>
+                <script>
+                let popup = document.getElementById("popup");
+
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup");
+                }
+                function on() {
+                    document.getElementById("overlay").style.display = "block";
+                  }
+                  
+                  function off() {
+                    document.getElementById("overlay").style.display = "none";
+                  }
+            </script>
+            </div>
+        </div>
+    </body>
+</html>

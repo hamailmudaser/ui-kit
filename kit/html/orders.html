@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script
+            src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../css/orders.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <a href="../html/index.html">
+                        <img src="../assets/Layer_1.png" alt>
+                    </a>
+                    <i class='bx bx-expand-vertical'></i>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/index.html">
+                                <i class='bx bxs-dashboard'></i>Dashboard
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/index.html">
+                                <i class='bx bxs-dashboard'></i>Menu
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/tables.html">
+                                <i class='bx bxs-dashboard'></i>Table
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/orders.html">
+                                <i class='bx bxs-dashboard'></i>Orders
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-support'></i>Support
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-cog'></i>Setting
+                        </div>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <div class="dark-mode-toggle">
+                        <i class='bx bx-cog'></i>Dark Mode
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="profile-info">
+                        <img src="../assets/review.webp" alt="Profile Picture">
+                        <div class="profile-details">
+                            <span class="name">Kadir Miye</span>
+                            <span class="email">kadir@8uikit.com</span>
+                        </div>
+                        <span class="pro-badge">PRO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-head">
+                    <div class="div-left">
+                        <h3>Sales</h3>
+                        <p>(All Warehouses)</p>
+                    </div>
+
+                </div>
+
+                <div class="sales-container">
+                    <div class="filters">
+                        <button class="filter-btn active"
+                            data-status="all">All</button>
+                        <button class="filter-btn"
+                            data-status="complete">Complete</button>
+                        <button class="filter-btn" data-status="on-hold">On
+                            Hold</button>
+                        <button class="filter-btn"
+                            data-status="canceled">Canceled</button>
+                        <div class="date-filter">
+                            <input type="date">
+                        </div>
+                    </div>
+
+                    <table class="sales-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>Reference No</th>
+                                <th>Order details</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>#940234</td>
+                                <td class="product">
+                                    <img src="../assets/Drink 1.png" alt>
+                                    <div class="div-td">
+                                        <div class="pro">
+                                            <h3>Product</h3>
+                                            <p>Item</p>
+                                        </div>
+                                        <button>T5</button>
+                                    </div>
+                                </td>
+                                <td>June 28, 2023 <span
+                                        class="table-info">10:45PM</span></td>
+                                <td>$23,940.48</td>
+                                <td><li>Pending</li>
+                                    <td class="actions">
+                                        <button class="action-btn edit">
+                                            <i class='bx bx-edit-alt'></i>
+                                        </button>
+                                        <button class="action-btn delete">
+                                            <i
+                                                class='bx bx-dots-vertical-rounded'></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#940234</td>
+                                    <td class="product">
+                                        <img src="../assets/Drink 1.png" alt>
+                                        <div class="div-td">
+                                            <div class="pro">
+                                                <h3>Product</h3>
+                                                <p>Item</p>
+                                            </div>
+                                            <button>T5</button>
+                                        </div>
+                                    </td>
+                                    <td>June 28, 2023 <span
+                                            class="table-info">10:45PM</span></td>
+                                    <td>$23,940.48</td>
+                                    <td><li>Paid</li>
+                                        <td class="actions">
+                                            <button class="action-btn edit">
+                                                <i class='bx bx-edit-alt'></i>
+                                            </button>
+                                            <button class="action-btn delete">
+                                                <i
+                                                    class='bx bx-dots-vertical-rounded'></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>#940234</td>
+                                        <td class="product">
+                                            <img src="../assets/Drink 1.png"
+                                                alt>
+                                            <div class="div-td">
+                                                <div class="pro">
+                                                    <h3>Product</h3>
+                                                    <p>Item</p>
+                                                </div>
+                                                <button>T5</button>
+                                            </div>
+                                        </td>
+                                        <td>June 28, 2023 <span
+                                                class="table-info">10:45PM</span></td>
+                                        <td>$23,940.48</td>
+                                        <td><li>Paid</li>
+                                            <td class="actions">
+                                                <button class="action-btn edit">
+                                                    <i
+                                                        class='bx bx-edit-alt'></i>
+                                                </button>
+                                                <button
+                                                    class="action-btn delete">
+                                                    <i
+                                                        class='bx bx-dots-vertical-rounded'></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>#940234</td>
+                                            <td class="product">
+                                                <img src="../assets/Drink 1.png"
+                                                    alt>
+                                                <div class="div-td">
+                                                    <div class="pro">
+                                                        <h3>Product</h3>
+                                                        <p>Item</p>
+                                                    </div>
+                                                    <button>T5</button>
+                                                </div>
+                                            </td>
+                                            <td>June 28, 2023 <span
+                                                    class="table-info">10:45PM</span></td>
+                                            <td>$23,940.48</td>
+                                            <td><li>Rejected</li></td>
+                                            <td class="actions">
+                                                <button class="action-btn edit">
+                                                    <i
+                                                        class='bx bx-edit-alt'></i>
+                                                </button>
+                                                <button
+                                                    class="action-btn delete">
+                                                    <i
+                                                        class='bx bx-dots-vertical-rounded'></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td>#940234</td>
+                                            <td class="product">
+                                                <img src="../assets/Drink 1.png"
+                                                    alt>
+                                                <div class="div-td">
+                                                    <div class="pro">
+                                                        <h3>Product</h3>
+                                                        <p>Item</p>
+                                                    </div>
+                                                    <button>T5</button>
+                                                </div>
+                                            </td>
+                                            <td>June 28, 2023 <span
+                                                    class="table-info">10:45PM</span></td>
+                                            <td>$23,940.48</td>
+                                            <td><li>Rejected</li>
+                                                <td class="actions">
+                                                    <button
+                                                        class="action-btn edit">
+                                                        <i
+                                                            class='bx bx-edit-alt'></i>
+                                                    </button>
+                                                    <button
+                                                        class="action-btn delete">
+                                                        <i
+                                                            class='bx bx-dots-vertical-rounded'></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"></td>
+                                                <td>#940234</td>
+                                                <td class="product">
+                                                    <img
+                                                        src="../assets/Drink 1.png"
+                                                        alt>
+                                                    <div class="div-td">
+                                                        <div class="pro">
+                                                            <h3>Product</h3>
+                                                            <p>Item</p>
+                                                        </div>
+                                                        <button>T5</button>
+                                                    </div>
+                                                </td>
+                                                <td>June 28, 2023 <span
+                                                        class="table-info">10:45PM</span></td>
+                                                <td>$23,940.48</td>
+                                                <td><li>Rejected</li>
+                                                    <td class="actions">
+                                                        <button
+                                                            class="action-btn edit">
+                                                            <i
+                                                                class='bx bx-edit-alt'></i>
+                                                        </button>
+                                                        <button
+                                                            class="action-btn delete">
+                                                            <i
+                                                                class='bx bx-dots-vertical-rounded'></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="pagination">
+                                            <p>Page 1 of 12</p>
+                                            <div class="button">
+                                                <button><</button>
+                                                <button>></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-overlay">
+                                            <div class="overlay-content">
+                                                <div class="items-section">
+                                                    <h3>Items (8)</h3>
+                                                    <ul class="items-list">
+
+                                                        <li class="item">
+                                                            <img
+                                                                src="../assets/Drink 11.png"
+                                                                alt="Product Image">
+                                                            <div
+                                                                class="item-details">
+                                                                <p
+                                                                    class="item-name">Product
+                                                                    Name</p>
+                                                                <p
+                                                                    class="item-price">$12</p>
+                                                            </div>
+                                                            <p
+                                                                class="item-quantity">x3</p>
+                                                        </li>
+                                                        <li class="item">
+                                                            <img
+                                                                src="../assets/Drink 11.png"
+                                                                alt="Product Image">
+                                                            <div
+                                                                class="item-details">
+                                                                <p
+                                                                    class="item-name">Product
+                                                                    Name</p>
+                                                                <p
+                                                                    class="item-price">$12</p>
+                                                            </div>
+                                                            <p
+                                                                class="item-quantity">x3</p>
+                                                        </li>
+                                                        <li class="item">
+                                                            <img
+                                                                src="../assets/Drink 11.png"
+                                                                alt="Product Image">
+                                                            <div
+                                                                class="item-details">
+                                                                <p
+                                                                    class="item-name">Product
+                                                                    Name</p>
+                                                                <p
+                                                                    class="item-price">$12</p>
+                                                            </div>
+                                                            <p
+                                                                class="item-quantity">x3</p>
+                                                        </li>
+                                                        <li class="item">
+                                                            <img
+                                                                src="../assets/Drink 11.png"
+                                                                alt="Product Image">
+                                                            <div
+                                                                class="item-details">
+                                                                <p
+                                                                    class="item-name">Product
+                                                                    Name</p>
+                                                                <p
+                                                                    class="item-price">$12</p>
+                                                            </div>
+                                                            <p
+                                                                class="item-quantity">x3</p>
+                                                        </li>
+                                                        <li class="item">
+                                                            <img
+                                                                src="../assets/Drink 11.png"
+                                                                alt="Product Image">
+                                                            <div
+                                                                class="item-details">
+                                                                <p
+                                                                    class="item-name">Product
+                                                                    Name</p>
+                                                                <p
+                                                                    class="item-price">$12</p>
+                                                            </div>
+                                                            <p
+                                                                class="item-quantity">x3</p>
+                                                        </li>
+
+                                                    </ul>
+                                                    <div class="total">
+                                                        <p>Total:</p>
+                                                        <p>$43.00</p>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="order-details-section">
+                                                    <h3>Order details</h3>
+                                                    <div class="barcode">
+                                                        <img
+                                                            src="../assets/barcode.JPG"
+                                                            alt="Barcode">
+                                                    </div>
+                                                    <div class="order-summary">
+                                                        <p>Order ID: <span
+                                                                id="order-id">#4234274</span></p>
+                                                        <p>Date: <span
+                                                                id="order-date">Aug
+                                                                5,
+                                                                2024</span></p>
+                                                        <p>Dine in: <span
+                                                                id="dine-in">Table
+                                                                8</span></p>
+                                                        <p>Status: <span
+                                                                class="status completed"
+                                                                id="order-status">Completed</span></p>
+                                                        <p>Payment: <span
+                                                                class="payment paid"
+                                                                id="order-payment">Paid</span></p>
+                                                    </div>
+                                                    <div class="summary">
+                                                        <h4>Summary</h4>
+                                                        <p>Total Items: <span
+                                                                id="total-items">8</span></p>
+                                                        <p>Total Payable: <span
+                                                                id="total-payable">$35.87</span></p>
+                                                        <p>Total Paying: <span
+                                                                id="total-paying">$35.87</span></p>
+                                                        <p>Balance: <span
+                                                                id="balance">$0.00</span></p>
+                                                    </div>
+                                                    <div class="order-actions">
+                                                        <button
+                                                            id="edit-btn">Edit</button>
+                                                        <button
+                                                            id="mail-btn">Mail</button>
+                                                        <button
+                                                            id="pdf-btn">PDF</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="overlay-background"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            const orderOverlay = document.querySelector(".order-overlay");
+                                            const overlayBackground = document.querySelector(".overlay-background");
+                                            const filterButtons = document.querySelectorAll(".filter-btn");
+                                            const closeButtons = document.querySelectorAll(".order-actions button");
+                                
+                                            // Function to open overlay with specific content
+                                            function openOverlay(status) {
+                                                // Populate the overlay with the status-specific information
+                                                document.getElementById('order-status').textContent = status.charAt(0).toUpperCase() + status.slice(1);
+                                
+                                                // Open the overlay
+                                                orderOverlay.classList.add("active");
+                                                overlayBackground.classList.add("active");
+                                            }
+                                
+                                            // Event listener for filter buttons
+                                            filterButtons.forEach(button => {
+                                                button.addEventListener("click", function() {
+                                                    // Remove 'active' class from all buttons and add to the clicked one
+                                                    filterButtons.forEach(btn => btn.classList.remove("active"));
+                                                    this.classList.add("active");
+                                
+                                                    // Get the status from the data attribute
+                                                    const status = this.getAttribute("data-status");
+                                
+                                                    // Open the overlay with the specific status
+                                                    openOverlay(status);
+                                                });
+                                            });
+                                
+                                            // Close overlay when clicking the background
+                                            overlayBackground.addEventListener("click", function() {
+                                                orderOverlay.classList.remove("active");
+                                                overlayBackground.classList.remove("active");
+                                            });
+                                
+                                            // Close overlay when clicking any of the action buttons
+                                            closeButtons.forEach(button => {
+                                                button.addEventListener("click", function() {
+                                                    orderOverlay.classList.remove("active");
+                                                    overlayBackground.classList.remove("active");
+                                                });
+                                            });
+                                        });
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </body>
+                </html>

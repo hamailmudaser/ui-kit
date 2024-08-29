@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/tables.css">
+        <script
+            src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <a href="../html/index.html">
+                        <img src="../assets/Layer_1.png" alt>
+                    </a>
+                    <i class='bx bx-expand-vertical'></i>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/index.html">
+                                <i class='bx bxs-dashboard'></i>Dashboard
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/index.html">
+                                <i class='bx bxs-dashboard'></i>Menu
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/tables.html">
+                                <i class='bx bxs-dashboard'></i>Table
+                            </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <a href="../html/orders.html">
+                            <i class='bx bxs-dashboard'></i>Orders
+                        </a>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-support'></i>Support
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="div-icon">
+                            <i class='bx bx-cog'></i>Setting
+                        </div>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <div class="dark-mode-toggle">
+                        <i class='bx bx-cog'></i>Dark Mode
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="profile-info">
+                        <img src="../assets/review.webp" alt="Profile Picture">
+                        <div class="profile-details">
+                            <span class="name">Kadir Miye</span>
+                            <span class="email">kadir@8uikit.com</span>
+                        </div>
+                        <span class="pro-badge">PRO</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-head">
+                    <div class="div-left">
+                        <h3>Tables</h3>
+                        <p>(384)</p>
+                    </div>
+                    <div class="div-right">
+                        <ul>
+                            <li>Available</li>
+                            <li>Ocuppied</li>
+                            <li>Reserved</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="tab">
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'allproducts')">
+                            <i class='bx bx-star'></i>Indoor</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'featured')">
+                            <i class='bx bx-star'></i>Outdoor</button>
+                        <button class="tablinks"
+                            onclick="openproducts(event, 'flashdeals')">
+                            <i class='bx bx-star'></i>VIP</button>
+                        <div class="search-bar">
+                            <input type="text" placeholder="   Search..">
+                        </div>
+
+                    </div>
+                    <script>
+                        function openproducts(evt, productName) {
+                            // Declare all variables
+                            var i, tabcontent, tablinks;
+                        
+                            // Get all elements with class="tabcontent" and hide them
+                            tabcontent = document.getElementsByClassName("tabcontent");
+                            for (i = 0; i < tabcontent.length; i++) {
+                                tabcontent[i].style.display = "none";
+                            }
+                        
+                            // Get all elements with class="tablinks" and remove the class "active"
+                            tablinks = document.getElementsByClassName("tablinks");
+                            for (i = 0; i < tablinks.length; i++) {
+                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                            }
+                        
+                            // Show the current tab, and add an "active" class to the button that opened the tab
+                            document.getElementById(productName).style.display = "block";
+                            evt.currentTarget.className += " active";
+                        }
+                        
+                        // By default, open the first tab
+                        document.addEventListener("DOMContentLoaded", function() {
+                            document.querySelector(".tablinks").click();
+                        });
+                        
+                    </script>
+                    <div id="allproducts" class="tabcontent"
+                        style="display: block;">
+                        <img src="../assets/tables.JPG" alt>
+
+                    </div>
+                    <div id="featured" class="tabcontent">
+                        <img src="../assets/tables.JPG" alt>
+
+                    </div>
+                    <div id="flashdeals" class="tabcontent">
+                        <img src="../assets/tables.JPG" alt>
+
+                    </div>
+                    <div class="content-fotter">
+                        <div class="cards">
+                            <div class="fotter-card">
+                                <div class="div-t5">
+                                    <h3>T5</h3>
+                                </div>
+                                <div class="fotter-body">
+                                    <div class="div-1">
+                                        <h4>#00934</h4>
+                                        <button><i
+                                                class='bx bxs-circle'></i>Kitchen</button>
+                                    </div>
+                                    <div class="div-2">
+                                        <p>8 item</p>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                        <h5>7:28 PM</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fotter-card">
+                                <div class="div-t5">
+                                    <h3>T5</h3>
+                                </div>
+                                <div class="fotter-body">
+                                    <div class="div-1">
+                                        <h4>#00934</h4>
+                                        <button><i
+                                                class='bx bxs-circle'></i>Kitchen</button>
+                                    </div>
+                                    <div class="div-2">
+                                        <p>8 item</p>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                        <h5>7:28 PM</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fotter-card">
+                                <div class="div-t5">
+                                    <h3>T5</h3>
+                                </div>
+                                <div class="fotter-body">
+                                    <div class="div-1">
+                                        <h4>#00934</h4>
+                                        <button><i
+                                                class='bx bxs-circle'></i>Kitchen</button>
+                                    </div>
+                                    <div class="div-2">
+                                        <p>8 item</p>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                        <h5>7:28 PM</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fotter-card">
+                                <div class="div-t5">
+                                    <h3>T5</h3>
+                                </div>
+                                <div class="fotter-body">
+                                    <div class="div-1">
+                                        <h4>#00934</h4>
+                                        <button><i
+                                                class='bx bxs-circle'></i>Kitchen</button>
+                                    </div>
+                                    <div class="div-2">
+                                        <p>8 item</p>
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                        <h5>7:28 PM</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </body>
+    </html>
